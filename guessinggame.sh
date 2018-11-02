@@ -3,7 +3,7 @@
 
 function compare {
 
-	local number_of_files=$(ls | wc -l)
+	local number_of_files=$(ls -l | egrep "^-" | wc -l)
 	local guess=-1
 
 	while [[ $guess -ne $number_of_files ]]
